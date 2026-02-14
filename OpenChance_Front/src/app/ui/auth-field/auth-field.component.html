@@ -1,27 +1,18 @@
 <div class="field">
-
   <label class="field__label">{{ label }}</label>
 
-  <div class="field__control">
+ <div class="field__control"
+     [class.field__control--error]="hasError()">
     <mat-icon class="field__icon">{{ icon }}</mat-icon>
 
-    <input
-      class="field__input"
-      [type]="inputType"
-      [formField]="field"
-    />
-
-    @if (type === 'password') {
-      <button
-        type="button"
-        class="field__action"
-        (click)="toggleVisibility($event)">
-        <mat-icon>
-          {{ hide() ? 'visibility_off' : 'visibility' }}
-        </mat-icon>
-      </button>
-    }
-
+    <input class="field__input" [type]="type" [formField]="field" (blur)="f.markAsTouched()" />
   </div>
 
+  @if (hasError()) {
+    <div class="error">
+      <span class="error-msg">
+        {{ firstError()?.message }}
+      </span>
+    </div>
+  }
 </div>

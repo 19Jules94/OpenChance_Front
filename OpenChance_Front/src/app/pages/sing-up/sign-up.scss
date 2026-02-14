@@ -9,3 +9,42 @@
   margin: 12px 0px 12px 0px;
   width: 100%;
 }
+/*Errores de crear usuario*/
+.server-error-msg {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #dc2626;
+}
+.password-rules {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rule--ok {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* =========================
+   SERVER ERRORS
+========================= */
+
+.server-errors {
+  display: grid;
+  gap: 6px;
+}
+
+.server-error-msg {
+  font-size: 13px;
+  color: #ef4444;
+}

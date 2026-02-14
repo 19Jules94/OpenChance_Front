@@ -7,11 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AuthService } from '../../core/services/auth.service';
 import { AuthFieldComponent } from '../../ui/auth-field/auth-field.component';
+import { LoginData } from '../../core/models/auth/login-user.request';
 
-interface LoginData {
-  email: string;
-  password: string;
-}
+
 
 @Component({
   selector: 'login',

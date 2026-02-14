@@ -26,7 +26,7 @@ body {
 
 :root {
   /* nav bar altura */
-   --navbar-height: 72px;
+  --navbar-height: 72px;
   /* -------- Backgrounds -------- */
   --bg-main: #f2f1f6; /* fondo real del landing */
   --bg-surface: #ffffff; /* cards */
@@ -93,12 +93,10 @@ body {
     background-color: var(--bg-main);
   }
 }
-.btn--primary:disabled,
-.btn--primary[disabled] {
-  background-color: #e5e7eb; 
-  color: #9ca3af; // texto gris
+.btn:disabled {
+  opacity: 0.55;
   cursor: not-allowed;
-  box-shadow: none;
+  transform: none;
 }
 /* Ghost */
 .btn--ghost {

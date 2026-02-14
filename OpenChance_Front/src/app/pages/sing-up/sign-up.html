@@ -2,10 +2,11 @@
   title="Crea tu cuenta"
   altText="¿Ya tienes cuenta?"
   altLink="/login"
-  altLinkLabel="Login">
-
+  altLinkLabel="Login"
+>
   <form (submit)="createUser($event)" class="auth-form">
 
+    <!-- EMAIL -->
     <app-auth-field
       label="Correo electrónico"
       icon="email"
@@ -13,6 +14,8 @@
       [field]="loginForm.email">
     </app-auth-field>
 
+
+    <!-- PASSWORD -->
     <app-auth-field
       label="Contraseña"
       icon="lock"
@@ -20,17 +23,62 @@
       [field]="loginForm.password">
     </app-auth-field>
 
-    <button class="btn btn--primary"
+    <!-- PASSWORD CHECKLIST -->
+    @if (loginForm.password().touched()) {
+
+      <div class="password-rules">
+
+        <div class="rule" [class.rule--ok]="hasMinLength()">
+          {{ hasMinLength() ? '✓' : '•' }}
+          Mínimo 8 caracteres
+        </div>
+
+        <div class="rule" [class.rule--ok]="hasUppercase()">
+          {{ hasUppercase() ? '✓' : '•' }}
+          Debe contener una mayúscula
+        </div>
+
+        <div class="rule" [class.rule--ok]="hasNumber()">
+          {{ hasNumber() ? '✓' : '•' }}
+          Debe contener un número
+        </div>
+
+        <div class="rule" [class.rule--ok]="hasSymbol()">
+          {{ hasSymbol() ? '✓' : '•' }}
+          Debe contener un símbolo
+        </div>
+
+      </div>
+
+    }
+
+
+    <!-- SERVER ERRORS -->
+    @if (serverErrors().length > 0) {
+      <div class="server-errors">
+        @for (error of serverErrors(); track error) {
+          <div class="server-error-msg">
+            {{ error }}
+          </div>
+        }
+      </div>
+    }
+
+
+    <!-- SUBMIT -->
+    <button
+      class="btn btn--primary"
       type="submit"
       [disabled]="loginForm().invalid()">
       Crear cuenta
     </button>
 
+
+    <!-- COMPANY TOGGLE -->
     <div class="auth-qtn">
       <span>¿Eres una empresa?</span>
       <mat-slide-toggle [formField]="loginForm.isCompany"></mat-slide-toggle>
     </div>
 
   </form>
-
 </app-auth-page>

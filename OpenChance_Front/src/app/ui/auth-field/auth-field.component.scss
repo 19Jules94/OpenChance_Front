@@ -4,7 +4,7 @@
 }
 
 .field__label {
-  margin: 3px 0px 3px 0px;  
+  margin: 3px 0px 3px 0px;
   font-size: 13px;
   font-weight: 500;
   color: rgba(15, 23, 42, 0.65);
@@ -18,19 +18,21 @@
   display: flex;
   align-items: center;
   background: #fff;
-  transition: border-color .15s ease, box-shadow .15s ease;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .field__control:focus-within {
-  border-color: rgba(37, 99, 235, .5);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .field__icon {
   position: absolute;
   left: 14px;
   font-size: 19px;
-  color: rgba(15, 23, 42, .45);
+  color: rgba(15, 23, 42, 0.45);
 }
 
 .field__input {
@@ -58,4 +60,13 @@
 
 .field__action:hover {
   background: rgba(15, 23, 42, 0.06);
+}
+.field__control--error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 13px;
 }
