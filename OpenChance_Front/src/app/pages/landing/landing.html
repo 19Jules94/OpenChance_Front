@@ -1,0 +1,53 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <h1>Buscar trabajo es confuso. En Next Branch lo estamos arreglando.</h1>
+
+    <p class="hero-sbt">
+      En Next Branch estamos construyendo una forma más humana y sencilla de encontrar tu sitio
+      profesional.
+    </p>
+
+    <div class="hero-actions">
+      <button mat-raised-button color="primary" class="btn btn--primary">Ver oportunidades</button>
+
+      <button mat-stroked-button class="btn btn--secondary">Crear mi perfil</button>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTAS -->
+<section class="card-offers">
+  <div class="offers-main">
+    <div class="offers-header">
+      <h2>Ofertas destacadas</h2>
+      <span class="offers-line"></span>
+    </div>
+
+    <div class="offers-content">
+      <!-- Columna izquierda: ofertas -->
+      <div class="offers-list">
+        @for (i of [0, 1, 2, 3, 4, 5]; track i) {
+          <offered-card-component></offered-card-component>
+        }
+      </div>
+
+      <!-- Columna derecha: empresas -->
+      <div class="offers-company">
+        <h3>Para empresas</h3>
+
+        <p>Publica ofertas pensadas para personas reales. Menos ruido, más intención.</p>
+
+        <ul>
+          <li>✔ Sin requisitos imposibles</li>
+          <li>✔ Visibilidad para perfiles junior</li>
+          <li>✔ Ofertas claras y honestas</li>
+        </ul>
+
+        <button mat-raised-button color="primary">Publicar oferta</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<div class="field">
+
+  <label class="field__label">{{ label }}</label>
+
+  <div class="field__control">
+    <mat-icon class="field__icon">{{ icon }}</mat-icon>
+
+    <input
+      class="field__input"
+      [type]="inputType"
+      [formField]="field"
+    />
+
+    @if (type === 'password') {
+      <button
+        type="button"
+        class="field__action"
+        (click)="toggleVisibility($event)">
+        <mat-icon>
+          {{ hide() ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+      </button>
+    }
+
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<section class="auth-main">
+
+  <app-auth-card>
+
+    <header class="auth-top">
+      <div class="auth-brand">
+        <img src="/assets/nb.png" alt="Next Branch" />
+        <span>Next</span>
+      </div>
+
+      <div class="auth-alt">
+        <span>{{ altText }}</span>
+        <a [routerLink]="altLink">{{ altLinkLabel }}</a>
+      </div>
+    </header>
+
+    <div class="auth-title">
+      <h2>{{ title }}</h2>
+    </div>
+
+    <ng-content></ng-content>
+
+  </app-auth-card>
+
+</section>

@@ -1,0 +1,151 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 460px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Fondo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/hero-bg-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0%;
+
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 87%);
+  z-index: 0;
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin-left: 100px;
+  padding-top: 24px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.hero-sbt {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+/* =========================
+   OFERTAS
+========================= */
+
+.card-offers {
+  position: relative;
+  background-color: #fff;
+  margin-top: -60px;
+
+  z-index: 2;
+}
+
+.offers-main {
+  margin-left: 100px;
+  max-width: 1200px;
+}
+
+/* Header */
+.offers-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.offers-header h2 {
+  font-size: 24px;
+  font-weight: 650;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.offers-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--border-light),
+    transparent
+  );
+}
+
+/* Contenido principal */
+.offers-content {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Columna ofertas */
+.offers-list {
+  flex: 0 0 70%;
+  min-height: 350px;
+}
+
+/* Columna empresas */
+.offers-company {
+  flex: 0 0 30%;
+  background-color: var(--bg-soft);
+  border-radius: 12px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.offers-company h3 {
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.offers-company p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.offers-company ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+  }
+}
+
+
+.offers-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

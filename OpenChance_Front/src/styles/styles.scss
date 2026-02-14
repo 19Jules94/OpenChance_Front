@@ -1,0 +1,111 @@
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* app.css */
+/* =========================
+   Next / OpenChance Theme
+   ========================= */
+
+:root {
+  /* nav bar altura */
+   --navbar-height: 72px;
+  /* -------- Backgrounds -------- */
+  --bg-main: #f2f1f6; /* fondo real del landing */
+  --bg-surface: #ffffff; /* cards */
+  --bg-soft: #adc1e8; /* fondos suaves / hero glow */
+
+  /* -------- Text -------- */
+  --text-primary: #141a36; /* títulos (azul casi negro) */
+  --text-secondary: #3d425d; /* párrafos */
+  --text-muted: #727995; /* hints, labels */
+
+  /* -------- Brand / Primary (azul real) -------- */
+  --primary-300: #adc1e8; /* fondos suaves */
+  --primary-500: #4e8bdb; /* iconos, enlaces */
+  --primary-600: #1059dc; /* CTA principal */
+  --primary-700: #0338cf; /* hover / focus */
+  --secondary: #ffff;
+  /* -------- Accents -------- */
+  --accent-success: #51b898; /* estados positivos */
+
+  /* -------- Borders -------- */
+  --border-light: rgba(20, 26, 54, 0.08);
+  --border-soft: rgba(16, 89, 220, 0.14);
+
+  /* -------- Effects -------- */
+  --glow-primary: rgba(78, 139, 219, 0.35);
+  --shadow-soft: 0 10px 30px rgba(20, 26, 54, 0.06);
+  --shadow-md: 0 20px 50px rgba(20, 26, 54, 0.1);
+}
+
+.btn {
+  height: 44px;
+  padding: 0 18px;
+  font-weight: 600;
+
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--border-soft);
+  }
+}
+
+/* Primary */
+.btn--primary {
+  background-color: var(--primary-600);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 550;
+  &:hover {
+    background-color: var(--primary-700);
+  }
+}
+.btn--secondary {
+  background-color: #fff;
+  border-radius: 4px;
+  &:hover {
+    background-color: var(--bg-main);
+  }
+}
+.btn--primary:disabled,
+.btn--primary[disabled] {
+  background-color: #e5e7eb; 
+  color: #9ca3af; // texto gris
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* Ghost */
+.btn--ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  font-weight: 550;
+  &:hover {
+    color: var(--primary-700);
+  }
+}

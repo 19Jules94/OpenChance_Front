@@ -1,0 +1,61 @@
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field__label {
+  margin: 3px 0px 3px 0px;  
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.field__control {
+  position: relative;
+  height: 44px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.field__control:focus-within {
+  border-color: rgba(37, 99, 235, .5);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+}
+
+.field__icon {
+  position: absolute;
+  left: 14px;
+  font-size: 19px;
+  color: rgba(15, 23, 42, .45);
+}
+
+.field__input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 14px 0 44px;
+  font-size: 15px;
+}
+
+.field__action {
+  position: absolute;
+  right: 6px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.field__action:hover {
+  background: rgba(15, 23, 42, 0.06);
+}

@@ -1,0 +1,36 @@
+<app-auth-page
+  title="Crea tu cuenta"
+  altText="¿Ya tienes cuenta?"
+  altLink="/login"
+  altLinkLabel="Login">
+
+  <form (submit)="createUser($event)" class="auth-form">
+
+    <app-auth-field
+      label="Correo electrónico"
+      icon="email"
+      type="email"
+      [field]="loginForm.email">
+    </app-auth-field>
+
+    <app-auth-field
+      label="Contraseña"
+      icon="lock"
+      type="password"
+      [field]="loginForm.password">
+    </app-auth-field>
+
+    <button class="btn btn--primary"
+      type="submit"
+      [disabled]="loginForm().invalid()">
+      Crear cuenta
+    </button>
+
+    <div class="auth-qtn">
+      <span>¿Eres una empresa?</span>
+      <mat-slide-toggle [formField]="loginForm.isCompany"></mat-slide-toggle>
+    </div>
+
+  </form>
+
+</app-auth-page>

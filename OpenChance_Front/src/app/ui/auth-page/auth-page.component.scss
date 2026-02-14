@@ -1,0 +1,46 @@
+.auth-main {
+  height: calc(100dvh - var(--navbar-height, 72px));
+  display: grid;
+  place-items: center;
+  padding: 20px;
+
+  box-sizing: border-box; /* ← CLAVE */
+}
+.auth-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-brand img {
+  width: 24px;
+  height: 24px;
+}
+
+.auth-brand span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.auth-alt {
+  font-size: 14px;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.auth-alt a {
+  margin-left: 6px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-title h2 {
+  margin: 20px 0 18px;
+  font-size: 28px;
+  font-weight: 650;
+}

@@ -1,0 +1,30 @@
+<app-auth-page
+  title="Iniciar sesión"
+  altText="¿Todavía no tienes una cuenta?"
+  altLink="/sign-up"
+  altLinkLabel="Crear una cuenta">
+
+  <form (submit)="loginUser($event)" class="auth-form">
+
+    <app-auth-field
+      label="Correo electrónico"
+      icon="email"
+      type="email"
+      [field]="loginForm.email">
+    </app-auth-field>
+
+    <app-auth-field
+      label="Contraseña"
+      icon="lock"
+      type="password"
+      [field]="loginForm.password">
+    </app-auth-field>
+
+    <button class="btn btn--primary"
+      type="submit"
+      [disabled]="loginForm().invalid()">
+      Iniciar sesión
+    </button>
+  </form>
+
+</app-auth-page>
