@@ -6,8 +6,6 @@ import {
   email,
   form,
   FormField,
-  minLength,
-  pattern,
   required,
 } from '@angular/forms/signals';
 import { MatIconModule } from '@angular/material/icon';
@@ -43,9 +41,6 @@ export class SignUpComponent {
     isCompany: false,
   });
 
-  // =========================
-  // FORM VALIDATION
-  // =========================
   loginForm = form(this.loginModel, (fieldPath) => {
     required(fieldPath.email, {
       message: 'El correo es obligatorio',
@@ -76,9 +71,6 @@ export class SignUpComponent {
     return /[^A-Za-z0-9]/.test(this.passwordValue());
   }
 
-  // =========================
-  // SUBMIT
-  // =========================
   createUser(event: Event) {
     event.preventDefault();
 

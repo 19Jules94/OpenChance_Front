@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OfferCardComponent } from "../../ui/offered-card/offered-card.component";
+import { AuthService } from '../../core/services/auth.service';
 
 
 @Component({
@@ -10,4 +11,14 @@ import { OfferCardComponent } from "../../ui/offered-card/offered-card.component
   styleUrls: ['./landing.scss'],
   imports: [OfferCardComponent],
 })
-export class LandingComponent {}
+export class LandingComponent {
+  constructor(private authService: AuthService) {}
+
+  testInterceptor() {
+    this.authService.testInterceptor().subscribe({
+      next: res => console.log("Respuesta:", res),
+      error: err => console.error("Error:", err)
+    });
+  }
+}
+
